@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha D&D 5.0</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Link da fonte -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&family=Tangerine:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- CABEÇALHO DA FICHA -->
+    <header>
+        <div class="linha1">
+            <div>
+                <label for="nomejogador">Nome do Jogador</label>
+                <input type="text" name="nomejogador" id="nomejogador">
+            </div>
+            <div>
+                <label for="nomepersonagem">Nome do Personagem</label>
+                <input type="text" name="nomepersonagem" id="nomepersonagem">
+            </div>
+            <div>
+                <label for="secao">Raça</label>
+                <select name="secao" id="secao">
+                    <option value=""></option>
+                    <option value="Anão">Anão</option>
+                    <option value="Humano">Humano</option>
+                    <option value="Elfo">Elfo</option>
+                    <option value="Alto Elfo">Alto Elfo</option>
+                    <option value="Orc">Orc</option>
+                    <option value="Drow">Drow</option>
+                    <option value="Draconato">Draconato</option>
+                </select>
+            </div>
+            <div>
+                <label for="nivel">Nível</label>
+                <input type="number" name="nivel" id="nivel" min="1" value="1">
+            </div>
+        </div>
+        <div class="linha2">
+            <div>
+                <label for="classe">Classe</label>
+                <select name="classe" id="classe">
+                    <option value=""></option>
+                    <option value="Bardo">Bardo</option>
+                    <option value="Barbaro">Bárbaro</option>
+                    <option value="Clerigo">Clérigo</option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                </select>
+            </div>
+            <div>
+                <label for="antecedente">Antecedente</label>
+                <input type="text" name="antecedente" id="antecedente">
+            </div>
+            <div>
+                <label for="tendencia">Tendência</label>
+                <select name="tendencia" id="tendencia">
+                    <option value=""></option>
+                    <option value="Leal Bom">Leal Bom</option>
+                    <option value="Leal Neutro">Leal Netutro</option>
+                    <option value="Leal Mau">Leal Mau</option>
+                    <option value="Neutro">Neutro</option>
+                    <option value="Caotico Bom">Caótico Bom</option>
+                    <option value="Caotico Neutro">Caótico Neutro</option>
+                    <option value="Caotico Mau">Caótico Mau</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- SESSÃO ATRIBUTOS -->
+        <div class="main-session">
+            <div class="atributos">
+                <h2>Atributos</h2>
+                <div class="atributo"> <!-- <== Força -->
+                    <h3>For.</h3>
+                    <input type="number" class="atributo-valor" value="0" max="20">
+                    <span></span>
+                    <label for="modificador-forca">Mod:</label>
+                </div>
+                <div class="atributo"> <!-- <== Destreza -->
+                    <h3>Des.</h3>
+                    <input type="number" class="atributo-valor">
+                    <span></span>
+                    <label for="modificador-forca">Mod:</label>
+                </div>
+                <div class="atributo"> <!-- <== Constituição -->
+                    <h3>Con.</h3>
+                    <input type="number" class="atributo-valor">
+                    <span></span>
+                    <label for="modificador-forca">Mod:</label>
+                </div>
+                <div class="atributo"> <!-- <== Inteligênca -->
+                    <h3>Int.</h3>
+                    <input type="number" class="atributo-valor">
+                    <span></span>
+                    <label for="modificador-forca">Mod:</label>
+                </div>
+                <div class="atributo"> <!-- <== Sabedoria -->
+                    <h3>Sab.</h3>
+                    <input type="number" class="atributo-valor">
+                    <span></span>
+                    <label for="modificador-forca">Mod:</label>
+                </div>
+                <div class="atributo"> <!-- <== Carisma -->
+                    <h3>Car.</h3>
+                    <input type="number" class="atributo-valor">
+                    <span></span>
+                    <label for="modificador-forca">Mod:</label>
+                </div>
+                <input type="submit" value="Testar!" onclick="calculoMod()">
+            </div>
+
+            <div class="pericias">
+
+                <div id="inspiracao">
+                    <input type="number">
+                    <span>INSPIRAÇÃO</span>
+                </div>
+                <div id="proficiencia">
+                    <input type="number">
+                    <span>BÔNUS DE PROFICIÊNCIA</span>
+                </div>
+                <div class="teste-de-resistencia">
+                    <p style="margin-bottom: 8px;">Teste de Resistencia</p>
+                    <div>
+                        <input type="radio" name="teste-de-resistencia" id="radio_forca">
+                        <label for="radio_forca"> ___ Força</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="teste-de-resistencia" id="radio_destreza">
+                        <label for="radio_destreza">___ Destreza</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="teste-de-resistencia" id="radio_constituicao">
+                        <label for="radio_constituicao">___ Constituicao</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="teste-de-resistencia" id="radio_inteligencia">
+                        <label for="radio_inteligencia">___ Inteligencia</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="teste-de-resistencia" id="radio_sabedoria">
+                        <label for="radio_sabedoria">___ Sabedoria</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="teste-de-resistencia" id="radio_carisma">
+                        <label for="radio_carisma">___ Carisma</label>
+                    </div>                    
+                </div>
+            </div>
+            
+        </div>
+
+
+        </form>
+        <script src="script.js"></script>
+</body>
+
+
+</html>
