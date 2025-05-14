@@ -45,7 +45,15 @@ header {
 
 }
 
-/* ATRIBUTOS */
+/*                1 PRINCIPAL */
+.main-session {
+    display: flex;
+    flex-direction: wrap;
+    background-color: antiquewhite;
+    gap: 18px;
+}
+
+/*                1.1 Atributos */
 
 .atributos {
     /* background-color: blue; */
@@ -92,14 +100,10 @@ header {
     margin: 10;
 }
 
-.main-session {
-    display: flex;
-    flex-direction: wrap;
-    background-color: antiquewhite;
-    gap: 18px;
-}
+/*                1.2 Periciais */
+/*                1.2.1 Inspirações e Bônus de Proficiencia */
 
-.pericias {
+.insp-prof-per {
     display: flex;
     flex-direction: column;
     width: 200px;
@@ -115,6 +119,22 @@ header {
     padding: 10px 10px 10px 30px;
 }
 
+/*                1.2.3 Tabela de pericias */
+.pericias {
+    h3 {
+        text-align: center;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    border: 1px dashed black;
+    border-radius: 8px;
+    padding-bottom: 10px;
+}
+
 /* ID's */
 #nivel {
     width: 15%;
@@ -125,6 +145,7 @@ header {
     flex-direction: row;
     align-items: center;
     gap: 5px;
+
     input {
         width: 30px;
         height: 30px;
@@ -132,11 +153,13 @@ header {
 }
 
 #proficiencia {
-    font-size: 12px; /* <== Tamanho da Fonte */
+    font-size: 12px;
+    /* <== Tamanho da Fonte */
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 5px;
+
     input {
         width: 30px;
         height: 30px;
