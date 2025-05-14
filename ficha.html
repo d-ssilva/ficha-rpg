@@ -85,82 +85,156 @@
                 <h2>Atributos</h2>
                 <div class="atributo"> <!-- <== Força -->
                     <h3>For.</h3>
-                    <input type="number" class="atributo-valor" value="0" max="20">
+                    <input type="number" class="atributo-valor" id="forca" max="20">
                     <span></span>
-                    <label for="modificador-forca">Mod:</label>
+                    <span> Mod</span>
                 </div>
                 <div class="atributo"> <!-- <== Destreza -->
                     <h3>Des.</h3>
-                    <input type="number" class="atributo-valor">
+                    <input type="number" class="atributo-valor" id="destreza" max="20">
                     <span></span>
-                    <label for="modificador-forca">Mod:</label>
+                    <span> Mod</span>
                 </div>
                 <div class="atributo"> <!-- <== Constituição -->
                     <h3>Con.</h3>
-                    <input type="number" class="atributo-valor">
+                    <input type="number" class="atributo-valor" id="constituicao" max="20">
                     <span></span>
-                    <label for="modificador-forca">Mod:</label>
+                    <span> Mod</span>
                 </div>
                 <div class="atributo"> <!-- <== Inteligênca -->
                     <h3>Int.</h3>
-                    <input type="number" class="atributo-valor">
+                    <input type="number" class="atributo-valor" id="inteligencia" max="20">
                     <span></span>
-                    <label for="modificador-forca">Mod:</label>
+                    <span> Mod</span>
                 </div>
                 <div class="atributo"> <!-- <== Sabedoria -->
                     <h3>Sab.</h3>
-                    <input type="number" class="atributo-valor">
+                    <input type="number" class="atributo-valor" id="sabedoria" max="20">
                     <span></span>
-                    <label for="modificador-forca">Mod:</label>
+                    <span> Mod:</span>
                 </div>
                 <div class="atributo"> <!-- <== Carisma -->
                     <h3>Car.</h3>
-                    <input type="number" class="atributo-valor">
+                    <input type="number" class="atributo-valor" id="carisma" max="20">
                     <span></span>
-                    <label for="modificador-forca">Mod:</label>
+                    <span> Mod:</span>
                 </div>
-                <input type="submit" value="Testar!" onclick="calculoMod()">
+                <input type="submit" value="Testar!">
             </div>
 
-            <div class="pericias">
+            <div class="insp-prof-per">
 
                 <div id="inspiracao">
-                    <input type="number">
+                    <input type="number" id="id-inspiracao">
                     <span>INSPIRAÇÃO</span>
                 </div>
                 <div id="proficiencia">
-                    <input type="number">
+                    <input type="number" id="id-proficiencia">
                     <span>BÔNUS DE PROFICIÊNCIA</span>
                 </div>
                 <div class="teste-de-resistencia">
-                    <p style="margin-bottom: 8px;">Teste de Resistencia</p>
+                    <h4 style="margin-bottom: 8px;">Teste de Resistencia</h3>
+                        <div>
+                            <input type="radio" name="teste-de-resistencia" id="radio_forca">
+                            <label for="radio_forca"> ___ Força</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="teste-de-resistencia" id="radio_destreza">
+                            <label for="radio_destreza">___ Destreza</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="teste-de-resistencia" id="radio_constituicao">
+                            <label for="radio_constituicao">___ Constituicao</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="teste-de-resistencia" id="radio_inteligencia">
+                            <label for="radio_inteligencia">___ Inteligencia</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="teste-de-resistencia" id="radio_sabedoria">
+                            <label for="radio_sabedoria">___ Sabedoria</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="teste-de-resistencia" id="radio_carisma">
+                            <label for="radio_carisma">___ Carisma</label>
+                        </div>
+                </div>
+                <div class="pericias">
+                    <h3>Pericias</h3>
                     <div>
-                        <input type="radio" name="teste-de-resistencia" id="radio_forca">
-                        <label for="radio_forca"> ___ Força</label>
+                        <input type="radio" name="tabela-pericias" id="radio_carisma">
+                        <label for="radio_carisma">___ Acrobacia</label>
                     </div>
                     <div>
-                        <input type="radio" name="teste-de-resistencia" id="radio_destreza">
-                        <label for="radio_destreza">___ Destreza</label>
+                        <input type="radio" name="tabela-pericias" id="radio_carisma">
+                        <label for="radio_carisma">___ Adestrar Animais</label>
                     </div>
                     <div>
-                        <input type="radio" name="teste-de-resistencia" id="radio_constituicao">
-                        <label for="radio_constituicao">___ Constituicao</label>
+                        <input type="radio" name="tabela-pericias" id="radio_carisma">
+                        <label for="radio_carisma">___ Arcanismo</label>
                     </div>
                     <div>
-                        <input type="radio" name="teste-de-resistencia" id="radio_inteligencia">
-                        <label for="radio_inteligencia">___ Inteligencia</label>
+                        <input type="radio" name="tabela-pericias" id="radio_carisma">
+                        <label for="radio_carisma">___ Atletismo</label>
                     </div>
                     <div>
-                        <input type="radio" name="teste-de-resistencia" id="radio_sabedoria">
-                        <label for="radio_sabedoria">___ Sabedoria</label>
+                        <input type="radio" name="tabela-pericias" id="radio_carisma">
+                        <label for="radio_carisma">___ Atuação</label>
                     </div>
                     <div>
-                        <input type="radio" name="teste-de-resistencia" id="radio_carisma">
-                        <label for="radio_carisma">___ Carisma</label>
-                    </div>                    
+                        <input type="radio" name="tabela-pericias" id="radio_carisma">
+                        <label for="radio_carisma">___ Enganação</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="tabela-pericias" id="radio_carisma">
+                        <label for="radio_carisma">___ Furtividade</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="tabela-pericias" id="radio_carisma">
+                        <label for="radio_carisma">___ Historia</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="tabela-pericias" id="radio_carisma">
+                        <label for="radio_carisma">___ Intimidação</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="tabela-pericias" id="radio_carisma">
+                        <label for="radio_carisma">___ Intuição</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="tabela-pericias" id="radio_carisma">
+                        <label for="radio_carisma">___ Investigação</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="tabela-pericias" id="radio_carisma">
+                        <label for="radio_carisma">___ Medicina</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="tabela-pericias" id="radio_carisma">
+                        <label for="radio_carisma">___ Natureza</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="tabela-pericias" id="radio_carisma">
+                        <label for="radio_carisma">___ Percepção</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="tabela-pericias" id="radio_carisma">
+                        <label for="radio_carisma">___ Persuasão</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="tabela-pericias" id="radio_carisma">
+                        <label for="radio_carisma">___ Prestidigitação</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="tabela-pericias" id="radio_carisma">
+                        <label for="radio_carisma">___ Religião</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="tabela-pericias" id="radio_carisma">
+                        <label for="radio_carisma">___ Sobrevivência</label>
+                    </div>
                 </div>
             </div>
-            
         </div>
 
 
